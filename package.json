@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/e0marina/constructor_word_guess/issues"
   },
-  "homepage": "https://github.com/e0marina/constructor_word_guess#readme"
+  "homepage": "https://github.com/e0marina/constructor_word_guess#readme",
+  "dependencies": {
+    "inquirer": "^7.0.6"
+  }
 }
