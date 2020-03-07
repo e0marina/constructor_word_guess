@@ -33,7 +33,12 @@ function Letter(underChar, guessed, userInput) {
     }
   };
 }
-// const AaA = new Letter("a", false, "b");
 
-// AaA.charFunc();
-// AaA.guessFunc();
+const AaA = new Letter("a", true, "a");
+AaA.charFunc();
+AaA.guessFunc();
+const BbB = new Letter("b", true, "b");
+BbB.charFunc();
+BbB.guessFunc();
+
+module.exports = Letter;
