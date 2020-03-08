@@ -1,22 +1,52 @@
 // Word.js: Contains a constructor, Word that depends on the Letter constructor. This is used to create an object representing the current word the user is attempting to guess. That means the constructor should define:
-var Letter = require("./letter");
-var letter = new Letter();
+
 // An array of new Letter objects representing the letters of the underlying word
 
 // A function that returns a string representing the word. This should call the function on each letter object (the first function defined in Letter.js) that displays the character or an underscore and concatenate those together.
 
 // A function that takes a character as an argument and calls the guess function on each letter object (the second function defined in Letter.js)
 
+//+++++++++++++++++++++++++++++++++++++++++++++++++++
+//requiring Letter function from the other doc
+var Letter = require("./letter");
+//var to hold one of the possible words the user could guess
+var randomWord = "pear";
+//var to hold array of letter objects
 var letterArr = [];
 
-//push Letter objects into the letterArr
-letterArr.push(letter);
-console.log(letterArr);
-
-//Word constructor
-function Word(letterArr) {
-  //loop through the letterArr
-  for (let i = 0; i < letterArr.length; i++) {
-    console.log(letterArr[i]);
+//Word constructor that creates an object representing the current word the user is trying to guess
+function Word() {
+  //maybe some kind of if statement that "decides" which letter array is selected
+  if (randomWord === "apple") {
+    var letter1 = new Letter("a", false);
+    var letter2 = new Letter("p", false);
+    var letter3 = new Letter("p", false);
+    var letter4 = new Letter("l", false);
+    var letter5 = new Letter("e", false);
+  } else if (randomWord === "pear") {
+    var letter1 = new Letter("p", false);
+    var letter2 = new Letter("e", false);
+    var letter3 = new Letter("a", false);
+    var letter4 = new Letter("r", false);
+  } else if (randomWord === "grape") {
+    var letter1 = new Letter("g", false);
+    var letter2 = new Letter("r", false);
+    var letter3 = new Letter("a", false);
+    var letter4 = new Letter("p", false);
+    var letter5 = new Letter("e", false);
+  } else if (randomWord === "peach") {
+    var letter1 = new Letter("p", false);
+    var letter2 = new Letter("e", false);
+    var letter3 = new Letter("a", false);
+    var letter4 = new Letter("c", false);
+    var letter5 = new Letter("h", false);
   }
+
+  //push Letter objects into the letterArr
+  letterArr.push(letter1, letter2, letter3, letter4, letter5);
+  console.log(letterArr);
+
+  // A function that returns a string representing the word. This should call the function on each letter object (the first function defined in Letter.js) that displays the character or an underscore and concatenate those together.
+  function stringTheWord() {}
 }
+Word();
