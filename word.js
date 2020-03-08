@@ -42,11 +42,15 @@ function Word() {
     var letter5 = new Letter("h", false);
   }
 
-  //push Letter objects into the letterArr
+  //push Letter objects into the letterArr (array of obj)
   letterArr.push(letter1, letter2, letter3, letter4, letter5);
   console.log(letterArr);
 
   // A function that returns a string representing the word. This should call the function on each letter object (the first function defined in Letter.js) that displays the character or an underscore and concatenate those together.
-  function stringTheWord() {}
+  function stringTheWord() {
+    console.log(letterArr);
+    //look at prototype and to string
+  }
+  stringTheWord();
 }
 Word();

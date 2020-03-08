@@ -14,24 +14,26 @@ var guessed = false;
 var userInput = ""; //process.argv?
 
 //Letter Constructor used to create objects
-function Letter(underChar, guessed, userInput) {
+function Letter(underChar) {
   this.underChar = underChar;
-  this.guessed = guessed;
+}
 
-  this.charFunc = function() {
-    if (userInput === underChar) {
-      console.log("this is working");
+function charFunc() {
+  if (userInput === underChar) {
+    console.log("this is working");
 
-      guessed = true;
-    }
-  };
-  this.guessFunc = function() {
-    if (guessed === true) {
-      console.log(underChar);
-    } else {
-      console.log("_");
-    }
-  };
+    guessed = true;
+  } else {
+    guessed = false;
+  }
+}
+
+function guessFunc() {
+  if (guessed === true) {
+    console.log(underChar);
+  } else {
+    console.log("_");
+  }
 }
 
 module.exports = Letter;
